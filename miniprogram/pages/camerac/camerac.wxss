@@ -1,0 +1,43 @@
+/* pages/camerac/camerac.wxss */
+.photo {
+  display: flex;
+ margin-top: 10px;
+ height: 100px;
+}
+
+.ph {
+  border: 1px    dashed #909090;
+  margin-right: 30px;
+  width: 80px;
+  height: 60px;
+}
+.phzz {
+  border: 1px    dashed #909090;
+  margin-right: 70px;
+  margin-left: 70px;
+  width: 100px;
+  height: 60px;
+}
+.phright{
+
+  border: 1px dashed #909090;
+  margin-left: 20px;
+   width: 80px;
+  height: 60px;
+}
+.textp{
+  margin-left: 70px;
+  font-size: 14px;
+}
+.text{
+   margin-left: 25px;
+  font-size: 14px;
+}
+.text2{
+   margin-left: 80px;
+  font-size: 14px;
+}
+.text3{
+   margin-left: 98px;
+  font-size: 14px;
+}

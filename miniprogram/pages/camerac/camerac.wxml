@@ -1,0 +1,23 @@
+<!--pages/camerac/camerac.wxml-->
+<camera device-position="front" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
+<button type="primary" bindtap="takePhoto">拍照</button>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['Gender'] > 50}}">性别：男</view>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['Gender'] < 50}}">性别：女</view>
+<view>年龄：{{ FaceInfos['0']['FaceAttributesInfo']['Age'] }}</view>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['Expression'] == 0 }}">表情：正常</view>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['Expression'] < 50 }}">表情：微笑</view>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['Expression'] > 50 }}">表情: 大笑</view>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['Beauty'] == 0 }}">魅力值：一般</view>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['Beauty'] < 50 }}">魅力值：有点迷人</view>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['Beauty'] > 50 }}">魅力值：偶像级</view>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['Glass'] == true }}">戴眼镜</view>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['Mask'] == true }}">戴口罩</view>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['Hat'] == true }}">戴帽子</view>
+<view wx:if="{{ FaceInfos['0']['FaceAttributesInfo']['EyeOpen'] == false }}">闭眼睛</view>
+<view>请求的图片宽度：{{ ImageWidth }}</view>
+<view>请求的图片高度：{{ ImageHeight }}</view>
+<view>人脸框左上角横坐标：{{ FaceInfos['0']['X'] }}</view>
+<view>人脸框左上角纵坐标：{{ FaceInfos['0']['Y'] }}</view>
+<view>人脸框宽度：{{ FaceInfos['0']['Width'] }}</view>
+<view>人脸框高度：{{ FaceInfos['0']['Height'] }}</view>
+<image mode="widthFix" src="{{src}}"></image>
